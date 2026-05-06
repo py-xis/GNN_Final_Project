@@ -1,0 +1,96 @@
+{
+  "settings": {
+    "models": [
+      "gcn",
+      "graphsage",
+      "gat",
+      "han"
+    ],
+    "trials": 30,
+    "max_epochs": 200,
+    "patience": 40,
+    "seeds": [
+      7,
+      42,
+      123
+    ]
+  },
+  "best_configs": {
+    "gcn": {
+      "lr": 0.01,
+      "weight_decay": 0.0001,
+      "hidden_dim": 128,
+      "dropout": 0.2,
+      "norm_type": "none",
+      "residual": true
+    },
+    "graphsage": {
+      "lr": 0.01,
+      "weight_decay": 0.0005,
+      "hidden_dim": 128,
+      "dropout": 0.5,
+      "norm_type": "batch",
+      "residual": true
+    },
+    "gat": {
+      "lr": 0.002,
+      "weight_decay": 0.001,
+      "hidden_dim": 64,
+      "dropout": 0.5,
+      "norm_type": "layer",
+      "residual": true,
+      "heads": 8
+    },
+    "han": {
+      "lr": 0.005,
+      "weight_decay": 0.0001,
+      "hidden_dim": 64,
+      "dropout": 0.6,
+      "norm_type": "layer",
+      "residual": false,
+      "heads": 4
+    }
+  },
+  "results": {
+    "gcn": {
+      "val_mean": 0.7991666396458944,
+      "val_std": 0.0031180660887789313,
+      "test_mean": 0.8044212261835734,
+      "test_std": 0.0010927214824193025,
+      "test_macro_f1_mean": 0.7960109607990166,
+      "test_macro_f1_std": 0.0009735022364855848,
+      "test_micro_f1_mean": 0.8044212465459011,
+      "test_micro_f1_std": 0.0010927313736599407
+    },
+    "graphsage": {
+      "val_mean": 0.8024999698003134,
+      "val_std": 0.008897584637079558,
+      "test_mean": 0.8116876482963562,
+      "test_std": 0.003837537161783574,
+      "test_macro_f1_mean": 0.8027572089775872,
+      "test_macro_f1_std": 0.004237460846070725,
+      "test_micro_f1_mean": 0.8116876471190257,
+      "test_micro_f1_std": 0.0038375464659200957
+    },
+    "gat": {
+      "val_mean": 0.7833333015441895,
+      "val_std": 0.010474827585396881,
+      "test_mean": 0.8017602960268656,
+      "test_std": 0.006432198018940436,
+      "test_macro_f1_mean": 0.7928111495399595,
+      "test_macro_f1_std": 0.006343305788648047,
+      "test_micro_f1_mean": 0.8017603111247569,
+      "test_micro_f1_std": 0.006432199923230204
+    },
+    "han": {
+      "val_mean": 0.9508333206176758,
+      "val_std": 0.0011785101780616189,
+      "test_mean": 0.9298945864041647,
+      "test_std": 0.0021024138677724143,
+      "test_macro_f1_mean": 0.9245842082006227,
+      "test_macro_f1_std": 0.0024315985429041328,
+      "test_micro_f1_mean": 0.9298945860198546,
+      "test_micro_f1_std": 0.002102409025092009
+    }
+  }
+}

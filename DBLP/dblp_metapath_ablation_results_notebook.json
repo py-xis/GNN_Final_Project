@@ -1,0 +1,436 @@
+{
+  "settings": {
+    "homogeneous_models": [
+      "gcn",
+      "graphsage",
+      "gat"
+    ],
+    "homogeneous_metapaths": [
+      "APA",
+      "APTPA",
+      "APCPA",
+      "ALL"
+    ],
+    "han_metapaths": [
+      "APA",
+      "APTPA",
+      "APCPA",
+      "APA+APTPA",
+      "APA+APCPA",
+      "APTPA+APCPA",
+      "APA+APTPA+APCPA"
+    ],
+    "seeds": [
+      7,
+      42,
+      123
+    ],
+    "max_epochs": 200,
+    "patience": 40
+  },
+  "best_configs": {
+    "gcn": {
+      "lr": 0.01,
+      "weight_decay": 0.0001,
+      "hidden_dim": 128,
+      "dropout": 0.2,
+      "norm_type": "none",
+      "residual": true
+    },
+    "graphsage": {
+      "lr": 0.01,
+      "weight_decay": 0.0005,
+      "hidden_dim": 128,
+      "dropout": 0.5,
+      "norm_type": "batch",
+      "residual": true
+    },
+    "gat": {
+      "lr": 0.002,
+      "weight_decay": 0.001,
+      "hidden_dim": 64,
+      "dropout": 0.5,
+      "norm_type": "layer",
+      "residual": true,
+      "heads": 8
+    },
+    "han": {
+      "lr": 0.005,
+      "weight_decay": 0.0001,
+      "hidden_dim": 64,
+      "dropout": 0.6,
+      "norm_type": "layer",
+      "residual": false,
+      "heads": 4
+    }
+  },
+  "baseline_results": {
+    "gcn": {
+      "val_mean": 0.7991666396458944,
+      "val_std": 0.0031180660887789313,
+      "test_mean": 0.8044212261835734,
+      "test_std": 0.0010927214824193025,
+      "test_macro_f1_mean": 0.7960109607990166,
+      "test_macro_f1_std": 0.0009735022364855848,
+      "test_micro_f1_mean": 0.8044212465459011,
+      "test_micro_f1_std": 0.0010927313736599407
+    },
+    "graphsage": {
+      "val_mean": 0.8024999698003134,
+      "val_std": 0.008897584637079558,
+      "test_mean": 0.8116876482963562,
+      "test_std": 0.003837537161783574,
+      "test_macro_f1_mean": 0.8027572089775872,
+      "test_macro_f1_std": 0.004237460846070725,
+      "test_micro_f1_mean": 0.8116876471190257,
+      "test_micro_f1_std": 0.0038375464659200957
+    },
+    "gat": {
+      "val_mean": 0.7833333015441895,
+      "val_std": 0.010474827585396881,
+      "test_mean": 0.8017602960268656,
+      "test_std": 0.006432198018940436,
+      "test_macro_f1_mean": 0.7928111495399595,
+      "test_macro_f1_std": 0.006343305788648047,
+      "test_micro_f1_mean": 0.8017603111247569,
+      "test_micro_f1_std": 0.006432199923230204
+    },
+    "han": {
+      "val_mean": 0.9508333206176758,
+      "val_std": 0.0011785101780616189,
+      "test_mean": 0.9298945864041647,
+      "test_std": 0.0021024138677724143,
+      "test_macro_f1_mean": 0.9245842082006227,
+      "test_macro_f1_std": 0.0024315985429041328,
+      "test_micro_f1_mean": 0.9298945860198546,
+      "test_micro_f1_std": 0.002102409025092009
+    }
+  },
+  "han_metapath_mapping": {
+    "APA": [
+      "author",
+      "metapath_0",
+      "author"
+    ],
+    "APTPA": [
+      "author",
+      "metapath_1",
+      "author"
+    ],
+    "APCPA": [
+      "author",
+      "metapath_2",
+      "author"
+    ]
+  },
+  "homogeneous": {
+    "gcn": {
+      "APA": {
+        "status": "completed",
+        "val_mean": 0.7991666396458944,
+        "val_std": 0.0031180660887789313,
+        "test_mean": 0.8044212261835734,
+        "test_std": 0.0010927214824193025,
+        "test_macro_f1_mean": 0.7960109607990166,
+        "test_macro_f1_std": 0.0009735022364855848,
+        "test_micro_f1_mean": 0.8044212465459011,
+        "test_micro_f1_std": 0.0010927313736599407,
+        "completed_seeds": [
+          7,
+          42,
+          123
+        ]
+      },
+      "APTPA": {
+        "status": "completed",
+        "val_mean": 0.7475000023841858,
+        "val_std": 0.0020412395056397686,
+        "test_mean": 0.7867157856623331,
+        "test_std": 0.001669160853427581,
+        "test_macro_f1_mean": 0.7778616176792033,
+        "test_macro_f1_std": 0.0010353675112828903,
+        "test_micro_f1_mean": 0.7867157916282879,
+        "test_micro_f1_std": 0.0016691747446832598,
+        "completed_seeds": [
+          7,
+          42,
+          123
+        ]
+      },
+      "APCPA": {
+        "status": "completed",
+        "val_mean": 0.9241666197776794,
+        "val_std": 0.0011785101780616189,
+        "test_mean": 0.90594615538915,
+        "test_std": 0.004271540629958463,
+        "test_macro_f1_mean": 0.8997258835836328,
+        "test_macro_f1_std": 0.004874699539736238,
+        "test_micro_f1_mean": 0.9059461672295569,
+        "test_micro_f1_std": 0.004271545748584411,
+        "completed_seeds": [
+          7,
+          42,
+          123
+        ]
+      },
+      "ALL": {
+        "status": "completed",
+        "val_mean": 0.9041666388511658,
+        "val_std": 0.005137006770104722,
+        "test_mean": 0.9114727179209391,
+        "test_std": 0.0014688998789134555,
+        "test_macro_f1_mean": 0.9012447176265413,
+        "test_macro_f1_std": 0.0018674667300331122,
+        "test_micro_f1_mean": 0.9114727254119332,
+        "test_micro_f1_std": 0.00146890800270263,
+        "completed_seeds": [
+          7,
+          42,
+          123
+        ]
+      }
+    },
+    "graphsage": {
+      "APA": {
+        "status": "completed",
+        "val_mean": 0.8024999698003134,
+        "val_std": 0.008897584637079558,
+        "test_mean": 0.8116876482963562,
+        "test_std": 0.003837537161783574,
+        "test_macro_f1_mean": 0.8027572089775872,
+        "test_macro_f1_std": 0.004237460846070725,
+        "test_micro_f1_mean": 0.8116876471190257,
+        "test_micro_f1_std": 0.0038375464659200957,
+        "completed_seeds": [
+          7,
+          42,
+          123
+        ]
+      },
+      "APTPA": {
+        "status": "completed",
+        "val_mean": 0.7808333039283752,
+        "val_std": 0.005137006770104722,
+        "test_mean": 0.7886603077252706,
+        "test_std": 0.0010131520354647642,
+        "test_macro_f1_mean": 0.7786709788563124,
+        "test_macro_f1_std": 0.0013131371183807967,
+        "test_micro_f1_mean": 0.7886603213591239,
+        "test_micro_f1_std": 0.0010131506433948936,
+        "completed_seeds": [
+          7,
+          42,
+          123
+        ]
+      },
+      "APCPA": {
+        "status": "completed",
+        "val_mean": 0.934166669845581,
+        "val_std": 0.0031180448487094924,
+        "test_mean": 0.9229352076848348,
+        "test_std": 0.005863152234252707,
+        "test_macro_f1_mean": 0.915693634421421,
+        "test_macro_f1_std": 0.006754584750197351,
+        "test_micro_f1_mean": 0.9229352164568622,
+        "test_micro_f1_std": 0.005863140144264655,
+        "completed_seeds": [
+          7,
+          42,
+          123
+        ]
+      },
+      "ALL": {
+        "status": "completed",
+        "val_mean": 0.85999995470047,
+        "val_std": 0.0020412395056397686,
+        "test_mean": 0.8574352463086446,
+        "test_std": 0.0032621734238723033,
+        "test_macro_f1_mean": 0.8481428017157238,
+        "test_macro_f1_std": 0.004299704500778663,
+        "test_micro_f1_mean": 0.8574352676286972,
+        "test_micro_f1_std": 0.003262179398323458,
+        "completed_seeds": [
+          7,
+          42,
+          123
+        ]
+      }
+    },
+    "gat": {
+      "APA": {
+        "status": "completed",
+        "val_mean": 0.7833333015441895,
+        "val_std": 0.010474827585396881,
+        "test_mean": 0.8017602960268656,
+        "test_std": 0.006432198018940436,
+        "test_macro_f1_mean": 0.7928111495399595,
+        "test_macro_f1_std": 0.006343305788648047,
+        "test_micro_f1_mean": 0.8017603111247569,
+        "test_micro_f1_std": 0.006432199923230204,
+        "completed_seeds": [
+          7,
+          42,
+          123
+        ]
+      },
+      "APTPA": {
+        "status": "oom",
+        "error_message": "CUDA out of memory. Tried to allocate 13.44 GiB. GPU 0 has a total capacity of 14.56 GiB of which 13.27 GiB is free. Including non-PyTorch memory, this process has 1.29 GiB memory in use. Of the allocated memory 1.13 GiB is allocated by PyTorch, and 16.23 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)",
+        "val_mean": null,
+        "val_std": null,
+        "test_mean": null,
+        "test_std": null,
+        "test_macro_f1_mean": null,
+        "test_macro_f1_std": null,
+        "test_micro_f1_mean": null,
+        "test_micro_f1_std": null,
+        "completed_seeds": [],
+        "oom_seed": 7
+      },
+      "APCPA": {
+        "status": "oom",
+        "error_message": "CUDA out of memory. Tried to allocate 9.54 GiB. GPU 0 has a total capacity of 14.56 GiB of which 3.81 GiB is free. Including non-PyTorch memory, this process has 10.75 GiB memory in use. Of the allocated memory 10.35 GiB is allocated by PyTorch, and 268.28 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)",
+        "val_mean": null,
+        "val_std": null,
+        "test_mean": null,
+        "test_std": null,
+        "test_macro_f1_mean": null,
+        "test_macro_f1_std": null,
+        "test_micro_f1_mean": null,
+        "test_micro_f1_std": null,
+        "completed_seeds": [],
+        "oom_seed": 7
+      },
+      "ALL": {
+        "status": "oom",
+        "error_message": "CUDA out of memory. Tried to allocate 17.07 GiB. GPU 0 has a total capacity of 14.56 GiB of which 4.44 GiB is free. Including non-PyTorch memory, this process has 10.12 GiB memory in use. Of the allocated memory 1.43 GiB is allocated by PyTorch, and 8.56 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)",
+        "val_mean": null,
+        "val_std": null,
+        "test_mean": null,
+        "test_std": null,
+        "test_macro_f1_mean": null,
+        "test_macro_f1_std": null,
+        "test_micro_f1_mean": null,
+        "test_micro_f1_std": null,
+        "completed_seeds": [],
+        "oom_seed": 7
+      }
+    }
+  },
+  "han": {
+    "han": {
+      "APA": {
+        "status": "completed",
+        "val_mean": 0.794166644414266,
+        "val_std": 0.006236116247444744,
+        "test_mean": 0.8115853071212769,
+        "test_std": 0.0036183912383572743,
+        "test_macro_f1_mean": 0.8014560944516024,
+        "test_macro_f1_std": 0.004245555292182589,
+        "test_micro_f1_mean": 0.8115853034489817,
+        "test_micro_f1_std": 0.0036183951549818025,
+        "completed_seeds": [
+          7,
+          42,
+          123
+        ]
+      },
+      "APTPA": {
+        "status": "completed",
+        "val_mean": 0.626666655143102,
+        "val_std": 0.15538035138720752,
+        "test_mean": 0.6452768246332804,
+        "test_std": 0.1565495412141042,
+        "test_macro_f1_mean": 0.5952323264408892,
+        "test_macro_f1_std": 0.20858550706110335,
+        "test_micro_f1_mean": 0.6452768396274691,
+        "test_micro_f1_std": 0.15654955589131742,
+        "completed_seeds": [
+          7,
+          42,
+          123
+        ]
+      },
+      "APCPA": {
+        "status": "completed",
+        "val_mean": 0.9433333277702332,
+        "val_std": 0.0031180448487094924,
+        "test_mean": 0.9222187995910645,
+        "test_std": 0.005891656425356644,
+        "test_macro_f1_mean": 0.9169322904035325,
+        "test_macro_f1_std": 0.005948451969893931,
+        "test_micro_f1_mean": 0.9222188107665541,
+        "test_micro_f1_std": 0.005891654063913311,
+        "completed_seeds": [
+          7,
+          42,
+          123
+        ]
+      },
+      "APA+APTPA": {
+        "status": "completed",
+        "val_mean": 0.8241666555404663,
+        "val_std": 0.0023570203561232377,
+        "test_mean": 0.8315423130989075,
+        "test_std": 0.0012366375198756268,
+        "test_macro_f1_mean": 0.8222044275912023,
+        "test_macro_f1_std": 0.0013716074554621042,
+        "test_micro_f1_mean": 0.8315423191075632,
+        "test_micro_f1_std": 0.001236623270248161,
+        "completed_seeds": [
+          7,
+          42,
+          123
+        ]
+      },
+      "APA+APCPA": {
+        "status": "completed",
+        "val_mean": 0.9491666555404663,
+        "val_std": 0.0011785101780616189,
+        "test_mean": 0.9286664525667826,
+        "test_std": 0.0012366210766665406,
+        "test_macro_f1_mean": 0.9236995175658432,
+        "test_macro_f1_std": 0.001186268612395119,
+        "test_micro_f1_mean": 0.9286664619793266,
+        "test_micro_f1_std": 0.0012366232702481395,
+        "completed_seeds": [
+          7,
+          42,
+          123
+        ]
+      },
+      "APTPA+APCPA": {
+        "status": "completed",
+        "val_mean": 0.9375,
+        "val_std": 0.006123718516919305,
+        "test_mean": 0.917510986328125,
+        "test_std": 0.003403601538513418,
+        "test_macro_f1_mean": 0.9126162604930611,
+        "test_macro_f1_std": 0.004055372769412757,
+        "test_micro_f1_mean": 0.9175110019445297,
+        "test_micro_f1_std": 0.003403600275983215,
+        "completed_seeds": [
+          7,
+          42,
+          123
+        ]
+      },
+      "APA+APTPA+APCPA": {
+        "status": "completed",
+        "val_mean": 0.949999988079071,
+        "val_std": 0.0,
+        "test_mean": 0.9294852018356323,
+        "test_std": 0.001760792654786815,
+        "test_macro_f1_mean": 0.9240668310141077,
+        "test_macro_f1_std": 0.002134646365436557,
+        "test_micro_f1_mean": 0.9294852113396787,
+        "test_micro_f1_std": 0.0017607870774829087,
+        "completed_seeds": [
+          7,
+          42,
+          123
+        ]
+      }
+    }
+  }
+}

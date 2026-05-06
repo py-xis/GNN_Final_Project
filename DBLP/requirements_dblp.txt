@@ -1,0 +1,10 @@
+--find-links https://data.pyg.org/whl/torch-2.11.0+cu130.html
+torch
+torch-geometric
+pyg_lib
+torch-scatter
+torch-sparse
+torch-cluster
+pandas
+scipy
+optuna

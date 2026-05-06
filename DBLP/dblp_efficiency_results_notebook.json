@@ -1,0 +1,306 @@
+{
+  "settings": {
+    "seeds": [
+      7,
+      42,
+      123
+    ],
+    "max_epochs": 200,
+    "patience": 40,
+    "note": "Measured in an appended efficiency cell. Existing benchmark result files are not modified."
+  },
+  "results": {
+    "gcn_apa": {
+      "status": "completed",
+      "model": "gcn",
+      "graph": "APA",
+      "view": "homogeneous",
+      "seeds": [
+        7,
+        42,
+        123
+      ],
+      "trainable_params": 86276,
+      "timing_source": "measured_by_this_cell_wall_clock_seconds",
+      "train_time_sec_mean": 1.0194936386665177,
+      "train_time_sec_std": 0.5041476794325763,
+      "best_epoch_mean": 4.0,
+      "best_epoch_std": 0.816496580927726,
+      "measured_test_acc_mean": 0.8044212261835734,
+      "measured_test_acc_std": 0.0010927214824193025,
+      "measured_macro_f1_mean": 0.7960109607990166,
+      "measured_macro_f1_std": 0.0009735022364855848,
+      "reported_metrics_from_saved_results": {
+        "source": "main_benchmark",
+        "main_test_accuracy": 0.8044212261835734,
+        "main_macro_f1": 0.7960109607990166
+      },
+      "seed_records": [
+        {
+          "seed": 7,
+          "status": "completed",
+          "train_time_sec": 1.7322999630000595,
+          "best_epoch": 3,
+          "val_acc": 0.7999999523162842,
+          "test_acc": 0.8038071990013123,
+          "test_macro_f1": 0.7957047370079091,
+          "test_micro_f1": 0.803807184525637
+        },
+        {
+          "seed": 42,
+          "status": "completed",
+          "train_time_sec": 0.6764202179997483,
+          "best_epoch": 5,
+          "val_acc": 0.8025000095367432,
+          "test_acc": 0.8035001158714294,
+          "test_macro_f1": 0.7950016484394106,
+          "test_micro_f1": 0.8035001535155051
+        },
+        {
+          "seed": 123,
+          "status": "completed",
+          "train_time_sec": 0.6497607349997452,
+          "best_epoch": 4,
+          "val_acc": 0.7949999570846558,
+          "test_acc": 0.8059563636779785,
+          "test_macro_f1": 0.7973264969497299,
+          "test_micro_f1": 0.8059564015965612
+        }
+      ]
+    },
+    "graphsage_apa": {
+      "status": "completed",
+      "model": "graphsage",
+      "graph": "APA",
+      "view": "homogeneous",
+      "seeds": [
+        7,
+        42,
+        123
+      ],
+      "trainable_params": 129796,
+      "timing_source": "measured_by_this_cell_wall_clock_seconds",
+      "train_time_sec_mean": 0.6612040083333947,
+      "train_time_sec_std": 0.03783660443345541,
+      "best_epoch_mean": 6.333333333333333,
+      "best_epoch_std": 1.247219128924647,
+      "measured_test_acc_mean": 0.8116876482963562,
+      "measured_test_acc_std": 0.003837537161783574,
+      "measured_macro_f1_mean": 0.8027572089775873,
+      "measured_macro_f1_std": 0.004237460846070725,
+      "reported_metrics_from_saved_results": {
+        "source": "main_benchmark",
+        "main_test_accuracy": 0.8116876482963562,
+        "main_macro_f1": 0.8027572089775872
+      },
+      "seed_records": [
+        {
+          "seed": 7,
+          "status": "completed",
+          "train_time_sec": 0.7147069349998674,
+          "best_epoch": 8,
+          "val_acc": 0.79749995470047,
+          "test_acc": 0.8142462372779846,
+          "test_macro_f1": 0.8056681533121284,
+          "test_micro_f1": 0.8142462388701259
+        },
+        {
+          "seed": 42,
+          "status": "completed",
+          "train_time_sec": 0.6351529600001413,
+          "best_epoch": 6,
+          "val_acc": 0.8149999976158142,
+          "test_acc": 0.8062634468078613,
+          "test_macro_f1": 0.7967653380245091,
+          "test_micro_f1": 0.8062634326066933
+        },
+        {
+          "seed": 123,
+          "status": "completed",
+          "train_time_sec": 0.6337521300001754,
+          "best_epoch": 5,
+          "val_acc": 0.7949999570846558,
+          "test_acc": 0.8145532608032227,
+          "test_macro_f1": 0.805838135596124,
+          "test_micro_f1": 0.8145532698802579
+        }
+      ]
+    },
+    "gat_apa": {
+      "status": "completed",
+      "model": "gat",
+      "graph": "APA",
+      "view": "homogeneous",
+      "seeds": [
+        7,
+        42,
+        123
+      ],
+      "trainable_params": 347148,
+      "timing_source": "measured_by_this_cell_wall_clock_seconds",
+      "train_time_sec_mean": 1.2357349826667512,
+      "train_time_sec_std": 0.1497322420139685,
+      "best_epoch_mean": 21.666666666666668,
+      "best_epoch_std": 7.318166133366716,
+      "measured_test_acc_mean": 0.8017602960268656,
+      "measured_test_acc_std": 0.006432198018940436,
+      "measured_macro_f1_mean": 0.7928111495399595,
+      "measured_macro_f1_std": 0.006343305788648047,
+      "reported_metrics_from_saved_results": {
+        "source": "main_benchmark",
+        "main_test_accuracy": 0.8017602960268656,
+        "main_macro_f1": 0.7928111495399595
+      },
+      "seed_records": [
+        {
+          "seed": 7,
+          "status": "completed",
+          "train_time_sec": 1.4417931949997183,
+          "best_epoch": 32,
+          "val_acc": 0.7724999785423279,
+          "test_acc": 0.7930610775947571,
+          "test_macro_f1": 0.7841542352883359,
+          "test_micro_f1": 0.7930610991710163
+        },
+        {
+          "seed": 42,
+          "status": "completed",
+          "train_time_sec": 1.0904610390002745,
+          "best_epoch": 17,
+          "val_acc": 0.79749995470047,
+          "test_acc": 0.8038071990013123,
+          "test_macro_f1": 0.7951025329747937,
+          "test_micro_f1": 0.803807184525637
+        },
+        {
+          "seed": 123,
+          "status": "completed",
+          "train_time_sec": 1.1749507140002606,
+          "best_epoch": 16,
+          "val_acc": 0.7799999713897705,
+          "test_acc": 0.8084126114845276,
+          "test_macro_f1": 0.7991766803567486,
+          "test_micro_f1": 0.8084126496776174
+        }
+      ]
+    },
+    "graphsage_apcpa": {
+      "status": "completed",
+      "model": "graphsage",
+      "graph": "APCPA",
+      "view": "homogeneous",
+      "seeds": [
+        7,
+        42,
+        123
+      ],
+      "trainable_params": 129796,
+      "timing_source": "measured_by_this_cell_wall_clock_seconds",
+      "train_time_sec_mean": 22.526014945333525,
+      "train_time_sec_std": 4.083868776296565,
+      "best_epoch_mean": 31.333333333333332,
+      "best_epoch_std": 12.970050972229146,
+      "measured_test_acc_mean": 0.9229352076848348,
+      "measured_test_acc_std": 0.005863152234252706,
+      "measured_macro_f1_mean": 0.9156936344214212,
+      "measured_macro_f1_std": 0.006754584750197351,
+      "reported_metrics_from_saved_results": {
+        "source": "metapath_ablation",
+        "metapath_test_accuracy": null,
+        "metapath_macro_f1": null
+      },
+      "seed_records": [
+        {
+          "seed": 7,
+          "status": "completed",
+          "train_time_sec": 16.757633286000328,
+          "best_epoch": 13,
+          "val_acc": 0.9300000071525574,
+          "test_acc": 0.931225061416626,
+          "test_macro_f1": 0.925239875354295,
+          "test_micro_f1": 0.9312250537304267
+        },
+        {
+          "seed": 42,
+          "status": "completed",
+          "train_time_sec": 25.162605195000197,
+          "best_epoch": 40,
+          "val_acc": 0.9375,
+          "test_acc": 0.9189438223838806,
+          "test_macro_f1": 0.9112181475553054,
+          "test_micro_f1": 0.9189438133251459
+        },
+        {
+          "seed": 123,
+          "status": "completed",
+          "train_time_sec": 25.657806355000048,
+          "best_epoch": 41,
+          "val_acc": 0.9350000023841858,
+          "test_acc": 0.9186367392539978,
+          "test_macro_f1": 0.9106228803546629,
+          "test_micro_f1": 0.9186367823150138
+        }
+      ]
+    },
+    "han_all": {
+      "status": "completed",
+      "model": "han",
+      "graph": "APA+APTPA+APCPA",
+      "view": "han",
+      "seeds": [
+        7,
+        42,
+        123
+      ],
+      "trainable_params": 26436,
+      "timing_source": "measured_by_this_cell_wall_clock_seconds",
+      "train_time_sec_mean": 36.493949133666774,
+      "train_time_sec_std": 1.1298313373523172,
+      "best_epoch_mean": 26.333333333333332,
+      "best_epoch_std": 2.494438257849294,
+      "measured_test_acc_mean": 0.9295875430107117,
+      "measured_test_acc_std": 0.0015110977850613086,
+      "measured_macro_f1_mean": 0.924317020951305,
+      "measured_macro_f1_std": 0.0017561672096736178,
+      "reported_metrics_from_saved_results": {
+        "source": "main_benchmark_and_metapath_ablation",
+        "main_test_accuracy": 0.9298945864041647,
+        "main_macro_f1": 0.9245842082006227,
+        "metapath_test_accuracy": null,
+        "metapath_macro_f1": null
+      },
+      "seed_records": [
+        {
+          "seed": 7,
+          "status": "completed",
+          "train_time_sec": 37.24064565500021,
+          "best_epoch": 29,
+          "val_acc": 0.949999988079071,
+          "test_acc": 0.931532084941864,
+          "test_macro_f1": 0.9266889584337363,
+          "test_micro_f1": 0.9315320847405588
+        },
+        {
+          "seed": 42,
+          "status": "completed",
+          "train_time_sec": 37.3439616149999,
+          "best_epoch": 27,
+          "val_acc": 0.949999988079071,
+          "test_acc": 0.929382860660553,
+          "test_macro_f1": 0.9237687193153071,
+          "test_micro_f1": 0.9293828676696346
+        },
+        {
+          "seed": 123,
+          "status": "completed",
+          "train_time_sec": 34.89724013100022,
+          "best_epoch": 23,
+          "val_acc": 0.9524999856948853,
+          "test_acc": 0.927847683429718,
+          "test_macro_f1": 0.9224933851048713,
+          "test_micro_f1": 0.9278477126189745
+        }
+      ]
+    }
+  }
+}
