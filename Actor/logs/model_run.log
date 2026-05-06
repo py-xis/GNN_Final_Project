@@ -1,0 +1,305 @@
+Logging to: reports/milestone2/logs/run_20260425_232406.log
+Run started: 2026-04-25T23:24:06.663601
+
+Loading Actor dataset...
+  Nodes: 7600, Edges: 30019, Features: 932, Classes: 5
+Models to run: ['lr_model', 'mlp', 'gcn', 'sage', 'gat', 'appnp']
+
+============================================================
+MODEL: LR_MODEL
+============================================================
+
+  Running Optuna HPO: 25 trials for [lr_model]
+    trial  1/25 | val macro-F1: 0.3271 | epochs:  107 | params: {'lr': 0.005611516415334507, 'weight_decay': 0.0071144760093434225, 'dropout': 0.4}
+    trial  2/25 | val macro-F1: 0.3372 | epochs:  184 | params: {'lr': 0.015751320499779727, 'weight_decay': 2.9380279387035334e-05, 'dropout': 0.0}
+    trial  3/25 | val macro-F1: 0.3245 | epochs:  278 | params: {'lr': 0.0013066739238053278, 'weight_decay': 0.003967605077052989, 'dropout': 0.30000000000000004}
+    trial  4/25 | val macro-F1: 0.3430 | epochs:  131 | params: {'lr': 0.02607024758370768, 'weight_decay': 1.1527987128232396e-05, 'dropout': 0.5}
+    trial  5/25 | val macro-F1: 0.3420 | epochs:  282 | params: {'lr': 0.04622589001020832, 'weight_decay': 4.335281794951564e-05, 'dropout': 0.1}
+    trial  6/25 | val macro-F1: 0.3390 | epochs:  118 | params: {'lr': 0.08627323035687517, 'weight_decay': 1.0422971466648474e-05, 'dropout': 0.5}
+    trial  7/25 | val macro-F1: 0.3341 | epochs:  193 | params: {'lr': 0.012899767802198219, 'weight_decay': 0.0003218056412620648, 'dropout': 0.5}
+    trial  8/25 | val macro-F1: 0.3317 | epochs:  139 | params: {'lr': 0.028889085246198713, 'weight_decay': 0.0006391553357778367, 'dropout': 0.2}
+    trial  9/25 | val macro-F1: 0.3371 | epochs:  317 | params: {'lr': 0.003966240895784105, 'weight_decay': 6.954771451368792e-05, 'dropout': 0.30000000000000004}
+    trial 10/25 | val macro-F1: 0.3289 | epochs:  257 | params: {'lr': 0.002024579472975721, 'weight_decay': 0.00012795311339473277, 'dropout': 0.4}
+    trial 11/25 | val macro-F1: 0.3303 | epochs:  108 | params: {'lr': 0.027550268046500615, 'weight_decay': 0.0011740085777673128, 'dropout': 0.2}
+    trial 12/25 | val macro-F1: 0.3406 | epochs:  166 | params: {'lr': 0.07697262207714109, 'weight_decay': 1.0561090101335705e-05, 'dropout': 0.0}
+    trial 13/25 | val macro-F1: 0.3406 | epochs:  265 | params: {'lr': 0.03907199662842054, 'weight_decay': 4.306246502779633e-05, 'dropout': 0.1}
+    trial 14/25 | val macro-F1: 0.3404 | epochs:  287 | params: {'lr': 0.048287705116562496, 'weight_decay': 2.573124333353478e-05, 'dropout': 0.1}
+    trial 15/25 | val macro-F1: 0.3419 | epochs:  238 | params: {'lr': 0.019480005358814743, 'weight_decay': 1.8142238297203744e-05, 'dropout': 0.1}
+    trial 16/25 | val macro-F1: 0.3361 | epochs:  235 | params: {'lr': 0.0075207358450664705, 'weight_decay': 0.00012161530007424809, 'dropout': 0.4}
+    trial 17/25 | val macro-F1: 0.3407 | epochs:  277 | params: {'lr': 0.05297516164628661, 'weight_decay': 8.643801953136459e-05, 'dropout': 0.2}
+    trial 18/25 | val macro-F1: 0.3407 | epochs:  223 | params: {'lr': 0.02376583448364196, 'weight_decay': 0.0002238844237253141, 'dropout': 0.30000000000000004}
+    trial 19/25 | val macro-F1: 0.3378 | epochs:  298 | params: {'lr': 0.011388571675020946, 'weight_decay': 4.1735084956714135e-05, 'dropout': 0.1}
+    trial 20/25 | val macro-F1: 0.3424 | epochs:  132 | params: {'lr': 0.05608070378309229, 'weight_decay': 1.603340804960574e-05, 'dropout': 0.5}
+    trial 21/25 | val macro-F1: 0.3392 | epochs:  125 | params: {'lr': 0.0895985083021617, 'weight_decay': 1.603586305717762e-05, 'dropout': 0.5}
+    trial 22/25 | val macro-F1: 0.3354 | epochs:  242 | params: {'lr': 0.05172176058324977, 'weight_decay': 4.6667353253497165e-05, 'dropout': 0.5}
+    trial 23/25 | val macro-F1: 0.3427 | epochs:  152 | params: {'lr': 0.03315421784525761, 'weight_decay': 1.6022934024538617e-05, 'dropout': 0.4}
+    trial 24/25 | val macro-F1: 0.3416 | epochs:  168 | params: {'lr': 0.031791928163065024, 'weight_decay': 1.7502467790684796e-05, 'dropout': 0.4}
+    trial 25/25 | val macro-F1: 0.3400 | epochs:  202 | params: {'lr': 0.01916269913424011, 'weight_decay': 1.0381221300700734e-05, 'dropout': 0.5}
+  => Best val macro-F1: 0.3430
+  => Best params: {'lr': 0.02607024758370768, 'weight_decay': 1.1527987128232396e-05, 'dropout': 0.5}
+
+  Evaluating best params across 10 splits...
+    split 0 | acc: 0.3414 | macro-F1: 0.3256 | weighted-F1: 0.3373 | epochs: 158
+    split 1 | acc: 0.3296 | macro-F1: 0.3173 | weighted-F1: 0.3242 | epochs: 166
+    split 2 | acc: 0.3533 | macro-F1: 0.3335 | weighted-F1: 0.3446 | epochs: 117
+    split 3 | acc: 0.3309 | macro-F1: 0.3112 | weighted-F1: 0.3254 | epochs: 133
+    split 4 | acc: 0.3283 | macro-F1: 0.3138 | weighted-F1: 0.3155 | epochs: 126
+    split 5 | acc: 0.3447 | macro-F1: 0.3288 | weighted-F1: 0.3408 | epochs: 147
+    split 6 | acc: 0.3204 | macro-F1: 0.3105 | weighted-F1: 0.3169 | epochs: 224
+    split 7 | acc: 0.3362 | macro-F1: 0.3201 | weighted-F1: 0.3297 | epochs: 131
+    split 8 | acc: 0.3487 | macro-F1: 0.3345 | weighted-F1: 0.3416 | epochs: 144
+    split 9 | acc: 0.3612 | macro-F1: 0.3371 | weighted-F1: 0.3576 | epochs: 135
+
+============================================================
+MODEL: MLP
+============================================================
+
+  Running Optuna HPO: 25 trials for [mlp]
+    trial  1/25 | val macro-F1: 0.3506 | epochs:  145 | params: {'hidden_dim': 128, 'num_layers': 3, 'dropout': 0.0, 'lr': 0.002051110418843397, 'weight_decay': 1.493656855461762e-05}
+    trial  2/25 | val macro-F1: 0.3410 | epochs:  108 | params: {'hidden_dim': 64, 'num_layers': 2, 'dropout': 0.5, 'lr': 0.04622589001020832, 'weight_decay': 4.335281794951564e-05}
+    trial  3/25 | val macro-F1: 0.3561 | epochs:  151 | params: {'hidden_dim': 256, 'num_layers': 3, 'dropout': 0.2, 'lr': 0.0038234752246751854, 'weight_decay': 0.000684792009557478}
+    trial  4/25 | val macro-F1: 0.3458 | epochs:  259 | params: {'hidden_dim': 256, 'num_layers': 2, 'dropout': 0.4, 'lr': 0.002508115686045234, 'weight_decay': 0.0003489018845491386}
+    trial  5/25 | val macro-F1: 0.3003 | epochs:  119 | params: {'hidden_dim': 256, 'num_layers': 2, 'dropout': 0.0, 'lr': 0.0790261954970823, 'weight_decay': 0.00788671412999049}
+    trial  6/25 | val macro-F1: 0.3700 | epochs:  156 | params: {'hidden_dim': 256, 'num_layers': 3, 'dropout': 0.2, 'lr': 0.010189902170515394, 'weight_decay': 0.00110256173837776}
+    trial  7/25 | val macro-F1: 0.3459 | epochs:  143 | params: {'hidden_dim': 128, 'num_layers': 3, 'dropout': 0.2, 'lr': 0.013838713864867116, 'weight_decay': 0.004348506546960565}
+    trial  8/25 | val macro-F1: 0.3574 | epochs:  167 | params: {'hidden_dim': 64, 'num_layers': 3, 'dropout': 0.30000000000000004, 'lr': 0.012834031763995992, 'weight_decay': 0.001480236684653565}
+    trial  9/25 | val macro-F1: 0.3556 | epochs:  112 | params: {'hidden_dim': 256, 'num_layers': 3, 'dropout': 0.1, 'lr': 0.0067486271316614535, 'weight_decay': 0.00010676447874510112}
+    trial 10/25 | val macro-F1: 0.3463 | epochs:  124 | params: {'hidden_dim': 256, 'num_layers': 2, 'dropout': 0.30000000000000004, 'lr': 0.03328856903753888, 'weight_decay': 0.0017340972286513598}
+    trial 11/25 | val macro-F1: 0.3492 | epochs:  111 | params: {'hidden_dim': 128, 'num_layers': 3, 'dropout': 0.1, 'lr': 0.020046179107204475, 'weight_decay': 8.57848703332404e-05}
+    trial 12/25 | val macro-F1: 0.3567 | epochs:  119 | params: {'hidden_dim': 64, 'num_layers': 3, 'dropout': 0.30000000000000004, 'lr': 0.009233985388181029, 'weight_decay': 0.0013590015788151253}
+    trial 13/25 | val macro-F1: 0.3270 | epochs:  138 | params: {'hidden_dim': 64, 'num_layers': 3, 'dropout': 0.4, 'lr': 0.005475470381304217, 'weight_decay': 0.002533702517008711}
+    trial 14/25 | val macro-F1: 0.3560 | epochs:  134 | params: {'hidden_dim': 64, 'num_layers': 3, 'dropout': 0.30000000000000004, 'lr': 0.018158532922746568, 'weight_decay': 0.0005734107617416722}
+    trial 15/25 | val macro-F1: 0.3510 | epochs:  427 | params: {'hidden_dim': 64, 'num_layers': 3, 'dropout': 0.2, 'lr': 0.0010519095028133836, 'weight_decay': 0.0002216379735224958}
+    trial 16/25 | val macro-F1: 0.3575 | epochs:  129 | params: {'hidden_dim': 256, 'num_layers': 3, 'dropout': 0.4, 'lr': 0.027641285585191855, 'weight_decay': 0.0008708009374620828}
+    trial 17/25 | val macro-F1: 0.3043 | epochs:  112 | params: {'hidden_dim': 256, 'num_layers': 3, 'dropout': 0.5, 'lr': 0.03368951740328574, 'weight_decay': 0.0008130458896878625}
+    trial 18/25 | val macro-F1: 0.3394 | epochs:  119 | params: {'hidden_dim': 256, 'num_layers': 2, 'dropout': 0.4, 'lr': 0.08715485229936243, 'weight_decay': 0.00020463787352844803}
+    trial 19/25 | val macro-F1: 0.3478 | epochs:  231 | params: {'hidden_dim': 256, 'num_layers': 3, 'dropout': 0.1, 'lr': 0.0265557021129725, 'weight_decay': 0.004220850673241312}
+    trial 20/25 | val macro-F1: 0.3449 | epochs:  124 | params: {'hidden_dim': 256, 'num_layers': 3, 'dropout': 0.4, 'lr': 0.050990742554055946, 'weight_decay': 0.00044844412359609933}
+    trial 21/25 | val macro-F1: 0.3275 | epochs:  114 | params: {'hidden_dim': 256, 'num_layers': 2, 'dropout': 0.5, 'lr': 0.009202790118136212, 'weight_decay': 0.003322713740680323}
+    trial 22/25 | val macro-F1: 0.3514 | epochs:  146 | params: {'hidden_dim': 64, 'num_layers': 3, 'dropout': 0.30000000000000004, 'lr': 0.014154600858557713, 'weight_decay': 0.0010674067045324655}
+    trial 23/25 | val macro-F1: 0.3601 | epochs:  207 | params: {'hidden_dim': 64, 'num_layers': 3, 'dropout': 0.2, 'lr': 0.011113060767476979, 'weight_decay': 0.0017572632720720314}
+    trial 24/25 | val macro-F1: 0.1332 | epochs:  106 | params: {'hidden_dim': 128, 'num_layers': 3, 'dropout': 0.2, 'lr': 0.005694684708341451, 'weight_decay': 0.009795134134285715}
+    trial 25/25 | val macro-F1: 0.3644 | epochs:  162 | params: {'hidden_dim': 256, 'num_layers': 3, 'dropout': 0.1, 'lr': 0.021997375767605798, 'weight_decay': 0.002116824422656558}
+  => Best val macro-F1: 0.3700
+  => Best params: {'hidden_dim': 256, 'num_layers': 3, 'dropout': 0.2, 'lr': 0.010189902170515394, 'weight_decay': 0.00110256173837776}
+
+  Evaluating best params across 10 splits...
+    split 0 | acc: 0.3993 | macro-F1: 0.3828 | weighted-F1: 0.3955 | epochs: 150
+    split 1 | acc: 0.3592 | macro-F1: 0.3421 | weighted-F1: 0.3501 | epochs: 263
+    split 2 | acc: 0.3704 | macro-F1: 0.3564 | weighted-F1: 0.3657 | epochs: 126
+    split 3 | acc: 0.3618 | macro-F1: 0.3389 | weighted-F1: 0.3540 | epochs: 237
+    split 4 | acc: 0.3500 | macro-F1: 0.3417 | weighted-F1: 0.3420 | epochs: 137
+    split 5 | acc: 0.3625 | macro-F1: 0.3379 | weighted-F1: 0.3572 | epochs: 124
+    split 6 | acc: 0.3579 | macro-F1: 0.3489 | weighted-F1: 0.3573 | epochs: 139
+    split 7 | acc: 0.3750 | macro-F1: 0.3582 | weighted-F1: 0.3674 | epochs: 160
+    split 8 | acc: 0.3664 | macro-F1: 0.3542 | weighted-F1: 0.3625 | epochs: 155
+    split 9 | acc: 0.3520 | macro-F1: 0.3335 | weighted-F1: 0.3545 | epochs: 179
+
+============================================================
+MODEL: GCN
+============================================================
+
+  Running Optuna HPO: 25 trials for [gcn]
+    trial  1/25 | val macro-F1: 0.2575 | epochs:  133 | params: {'hidden_dim': 128, 'num_layers': 3, 'dropout': 0.0, 'lr': 0.002051110418843397, 'weight_decay': 1.493656855461762e-05}
+    trial  2/25 | val macro-F1: 0.2747 | epochs:  106 | params: {'hidden_dim': 64, 'num_layers': 2, 'dropout': 0.5, 'lr': 0.04622589001020832, 'weight_decay': 4.335281794951564e-05}
+    trial  3/25 | val macro-F1: 0.2564 | epochs:  137 | params: {'hidden_dim': 256, 'num_layers': 3, 'dropout': 0.2, 'lr': 0.0038234752246751854, 'weight_decay': 0.000684792009557478}
+    trial  4/25 | val macro-F1: 0.2794 | epochs:  135 | params: {'hidden_dim': 256, 'num_layers': 2, 'dropout': 0.4, 'lr': 0.002508115686045234, 'weight_decay': 0.0003489018845491386}
+    trial  5/25 | val macro-F1: 0.2134 | epochs:  126 | params: {'hidden_dim': 256, 'num_layers': 2, 'dropout': 0.0, 'lr': 0.0790261954970823, 'weight_decay': 0.00788671412999049}
+    trial  6/25 | val macro-F1: 0.2736 | epochs:  171 | params: {'hidden_dim': 256, 'num_layers': 2, 'dropout': 0.5, 'lr': 0.0010862348973937122, 'weight_decay': 0.0004970287028533824}
+    trial  7/25 | val macro-F1: 0.2708 | epochs:  115 | params: {'hidden_dim': 128, 'num_layers': 2, 'dropout': 0.30000000000000004, 'lr': 0.010269456227948646, 'weight_decay': 0.00011058487118966117}
+    trial  8/25 | val macro-F1: 0.2258 | epochs:  111 | params: {'hidden_dim': 64, 'num_layers': 3, 'dropout': 0.30000000000000004, 'lr': 0.009610634313853344, 'weight_decay': 0.002941738977054063}
+    trial  9/25 | val macro-F1: 0.2724 | epochs:  114 | params: {'hidden_dim': 256, 'num_layers': 2, 'dropout': 0.4, 'lr': 0.0063431012836033685, 'weight_decay': 0.00014547307271298095}
+    trial 10/25 | val macro-F1: 0.2477 | epochs:  167 | params: {'hidden_dim': 256, 'num_layers': 3, 'dropout': 0.2, 'lr': 0.02257543441890583, 'weight_decay': 0.0012690764532532696}
+    trial 11/25 | val macro-F1: 0.2729 | epochs:  156 | params: {'hidden_dim': 128, 'num_layers': 2, 'dropout': 0.4, 'lr': 0.0023717300866001874, 'weight_decay': 1.082257215204296e-05}
+    trial 12/25 | val macro-F1: 0.2702 | epochs:  113 | params: {'hidden_dim': 64, 'num_layers': 2, 'dropout': 0.5, 'lr': 0.0982665256374889, 'weight_decay': 4.838430080585442e-05}
+    trial 13/25 | val macro-F1: 0.2719 | epochs:  108 | params: {'hidden_dim': 64, 'num_layers': 2, 'dropout': 0.4, 'lr': 0.029008499422358978, 'weight_decay': 4.2784679635768286e-05}
+    trial 14/25 | val macro-F1: 0.2795 | epochs:  106 | params: {'hidden_dim': 64, 'num_layers': 2, 'dropout': 0.5, 'lr': 0.03171337499936082, 'weight_decay': 0.0001941861930060487}
+    trial 15/25 | val macro-F1: 0.2701 | epochs:  144 | params: {'hidden_dim': 64, 'num_layers': 2, 'dropout': 0.4, 'lr': 0.01828147505097127, 'weight_decay': 0.0002216379735224958}
+    trial 16/25 | val macro-F1: 0.2704 | epochs:  166 | params: {'hidden_dim': 256, 'num_layers': 2, 'dropout': 0.5, 'lr': 0.0012456028027429565, 'weight_decay': 0.0013116452991056213}
+    trial 17/25 | val macro-F1: 0.2732 | epochs:  156 | params: {'hidden_dim': 64, 'num_layers': 2, 'dropout': 0.30000000000000004, 'lr': 0.004528669663591089, 'weight_decay': 0.00034080144021073685}
+    trial 18/25 | val macro-F1: 0.2430 | epochs:  170 | params: {'hidden_dim': 256, 'num_layers': 3, 'dropout': 0.1, 'lr': 0.04174019698880702, 'weight_decay': 0.00010930878501293968}
+    trial 19/25 | val macro-F1: 0.2793 | epochs:  145 | params: {'hidden_dim': 64, 'num_layers': 2, 'dropout': 0.4, 'lr': 0.012027906411716686, 'weight_decay': 0.0009143844830217167}
+    trial 20/25 | val macro-F1: 0.2533 | epochs:  113 | params: {'hidden_dim': 128, 'num_layers': 2, 'dropout': 0.5, 'lr': 0.0023221712816697514, 'weight_decay': 0.0029684466601085737}
+    trial 21/25 | val macro-F1: 0.2585 | epochs:  124 | params: {'hidden_dim': 256, 'num_layers': 3, 'dropout': 0.30000000000000004, 'lr': 0.015934446130890515, 'weight_decay': 0.0002535565239098583}
+    trial 22/25 | val macro-F1: 0.2773 | epochs:  173 | params: {'hidden_dim': 64, 'num_layers': 2, 'dropout': 0.4, 'lr': 0.011673223601063556, 'weight_decay': 0.0008010270517937022}
+    trial 23/25 | val macro-F1: 0.2681 | epochs:  180 | params: {'hidden_dim': 64, 'num_layers': 2, 'dropout': 0.4, 'lr': 0.0066970883262907985, 'weight_decay': 0.0018291278236934854}
+    trial 24/25 | val macro-F1: 0.2758 | epochs:  136 | params: {'hidden_dim': 64, 'num_layers': 2, 'dropout': 0.5, 'lr': 0.03399768650516333, 'weight_decay': 0.00043363245652160425}
+    trial 25/25 | val macro-F1: 0.2710 | epochs:  123 | params: {'hidden_dim': 64, 'num_layers': 2, 'dropout': 0.4, 'lr': 0.014285890452602383, 'weight_decay': 0.00016864297695127472}
+  => Best val macro-F1: 0.2795
+  => Best params: {'hidden_dim': 64, 'num_layers': 2, 'dropout': 0.5, 'lr': 0.03171337499936082, 'weight_decay': 0.0001941861930060487}
+
+  Evaluating best params across 10 splits...
+    split 0 | acc: 0.2697 | macro-F1: 0.2398 | weighted-F1: 0.2587 | epochs: 124
+    split 1 | acc: 0.2579 | macro-F1: 0.2373 | weighted-F1: 0.2503 | epochs: 108
+    split 2 | acc: 0.2809 | macro-F1: 0.2586 | weighted-F1: 0.2762 | epochs: 130
+    split 3 | acc: 0.2632 | macro-F1: 0.2380 | weighted-F1: 0.2537 | epochs: 193
+    split 4 | acc: 0.2783 | macro-F1: 0.2572 | weighted-F1: 0.2704 | epochs: 179
+    split 5 | acc: 0.2724 | macro-F1: 0.2493 | weighted-F1: 0.2662 | epochs: 188
+    split 6 | acc: 0.2546 | macro-F1: 0.2374 | weighted-F1: 0.2507 | epochs: 190
+    split 7 | acc: 0.2599 | macro-F1: 0.2390 | weighted-F1: 0.2549 | epochs: 228
+    split 8 | acc: 0.2737 | macro-F1: 0.2424 | weighted-F1: 0.2574 | epochs: 109
+    split 9 | acc: 0.2770 | macro-F1: 0.2622 | weighted-F1: 0.2814 | epochs: 130
+
+============================================================
+MODEL: SAGE
+============================================================
+
+  Running Optuna HPO: 25 trials for [sage]
+    trial  1/25 | val macro-F1: 0.3525 | epochs:  124 | params: {'hidden_dim': 128, 'num_layers': 3, 'aggr': 'mean', 'dropout': 0.0, 'lr': 0.05399484409787434, 'weight_decay': 0.0006358358856676254}
+    trial  2/25 | val macro-F1: 0.3420 | epochs:  126 | params: {'hidden_dim': 256, 'num_layers': 3, 'aggr': 'mean', 'dropout': 0.1, 'lr': 0.004059611610484304, 'weight_decay': 0.00037520558551242813}
+    trial  3/25 | val macro-F1: 0.3250 | epochs:  113 | params: {'hidden_dim': 256, 'num_layers': 2, 'aggr': 'max', 'dropout': 0.2, 'lr': 0.037183641805732096, 'weight_decay': 3.972110727381908e-05}
+    trial  4/25 | val macro-F1: 0.3247 | epochs:  122 | params: {'hidden_dim': 128, 'num_layers': 3, 'aggr': 'mean', 'dropout': 0.5, 'lr': 0.08536189862866832, 'weight_decay': 0.002661901888489057}
+    trial  5/25 | val macro-F1: 0.3139 | epochs:  120 | params: {'hidden_dim': 256, 'num_layers': 2, 'aggr': 'max', 'dropout': 0.0, 'lr': 0.0658628931758311, 'weight_decay': 5.9750279999602906e-05}
+    trial  6/25 | val macro-F1: 0.3181 | epochs:  125 | params: {'hidden_dim': 128, 'num_layers': 3, 'aggr': 'mean', 'dropout': 0.4, 'lr': 0.013527769084615445, 'weight_decay': 0.005284384205738863}
+    trial  7/25 | val macro-F1: 0.3406 | epochs:  287 | params: {'hidden_dim': 64, 'num_layers': 3, 'aggr': 'mean', 'dropout': 0.0, 'lr': 0.0011401357990728671, 'weight_decay': 0.0005403958119907039}
+    trial  8/25 | val macro-F1: 0.3332 | epochs:  113 | params: {'hidden_dim': 128, 'num_layers': 2, 'aggr': 'mean', 'dropout': 0.30000000000000004, 'lr': 0.016382061352101022, 'weight_decay': 1.1030029929341687e-05}
+    trial  9/25 | val macro-F1: 0.3188 | epochs:  191 | params: {'hidden_dim': 64, 'num_layers': 3, 'aggr': 'max', 'dropout': 0.2, 'lr': 0.0042390570674318865, 'weight_decay': 0.0012172383008231193}
+    trial 10/25 | val macro-F1: 0.2823 | epochs:  110 | params: {'hidden_dim': 128, 'num_layers': 2, 'aggr': 'mean', 'dropout': 0.1, 'lr': 0.03397545646647475, 'weight_decay': 0.008784431645262556}
+    trial 11/25 | val macro-F1: 0.3149 | epochs:  178 | params: {'hidden_dim': 128, 'num_layers': 3, 'aggr': 'max', 'dropout': 0.30000000000000004, 'lr': 0.0052077223578160135, 'weight_decay': 0.00012378135026299263}
+    trial 12/25 | val macro-F1: 0.3388 | epochs:  148 | params: {'hidden_dim': 256, 'num_layers': 3, 'aggr': 'mean', 'dropout': 0.1, 'lr': 0.0022726147933791255, 'weight_decay': 0.0002977012380496367}
+    trial 13/25 | val macro-F1: 0.3519 | epochs:  136 | params: {'hidden_dim': 256, 'num_layers': 3, 'aggr': 'mean', 'dropout': 0.1, 'lr': 0.005025640846956622, 'weight_decay': 0.0005817869019805709}
+    trial 14/25 | val macro-F1: 0.3644 | epochs:  152 | params: {'hidden_dim': 256, 'num_layers': 3, 'aggr': 'mean', 'dropout': 0.0, 'lr': 0.009632727868859254, 'weight_decay': 0.0012222551268443087}
+    trial 15/25 | val macro-F1: 0.3582 | epochs:  133 | params: {'hidden_dim': 64, 'num_layers': 3, 'aggr': 'mean', 'dropout': 0.0, 'lr': 0.020950697759902156, 'weight_decay': 0.0017905716664153024}
+    trial 16/25 | val macro-F1: 0.3550 | epochs:  182 | params: {'hidden_dim': 64, 'num_layers': 3, 'aggr': 'mean', 'dropout': 0.0, 'lr': 0.020118243605004284, 'weight_decay': 0.0021793637623134235}
+    trial 17/25 | val macro-F1: 0.3549 | epochs:  163 | params: {'hidden_dim': 64, 'num_layers': 3, 'aggr': 'mean', 'dropout': 0.2, 'lr': 0.011344136082881972, 'weight_decay': 0.0018070645091527613}
+    trial 18/25 | val macro-F1: 0.3321 | epochs:  170 | params: {'hidden_dim': 64, 'num_layers': 2, 'aggr': 'mean', 'dropout': 0.0, 'lr': 0.008515449142976745, 'weight_decay': 0.0034588035646371824}
+    trial 19/25 | val macro-F1: 0.3510 | epochs:  129 | params: {'hidden_dim': 64, 'num_layers': 3, 'aggr': 'max', 'dropout': 0.1, 'lr': 0.023116886719603262, 'weight_decay': 0.001047225271398424}
+    trial 20/25 | val macro-F1: 0.3338 | epochs:  125 | params: {'hidden_dim': 256, 'num_layers': 3, 'aggr': 'mean', 'dropout': 0.4, 'lr': 0.00807832035281423, 'weight_decay': 0.00017435954568483075}
+    trial 21/25 | val macro-F1: 0.2887 | epochs:  111 | params: {'hidden_dim': 256, 'num_layers': 2, 'aggr': 'mean', 'dropout': 0.0, 'lr': 0.027561024585428594, 'weight_decay': 0.007762522726443693}
+    trial 22/25 | val macro-F1: 0.3592 | epochs:  166 | params: {'hidden_dim': 64, 'num_layers': 3, 'aggr': 'mean', 'dropout': 0.0, 'lr': 0.019346679806542616, 'weight_decay': 0.002319708841230074}
+    trial 23/25 | val macro-F1: 0.3535 | epochs:  142 | params: {'hidden_dim': 64, 'num_layers': 3, 'aggr': 'mean', 'dropout': 0.1, 'lr': 0.008219296930618505, 'weight_decay': 0.0012544194041952533}
+    trial 24/25 | val macro-F1: 0.3579 | epochs:  210 | params: {'hidden_dim': 64, 'num_layers': 3, 'aggr': 'mean', 'dropout': 0.0, 'lr': 0.01433158489333706, 'weight_decay': 0.0037377241482885234}
+    trial 25/25 | val macro-F1: 0.3569 | epochs:  139 | params: {'hidden_dim': 64, 'num_layers': 3, 'aggr': 'mean', 'dropout': 0.0, 'lr': 0.033271059345114214, 'weight_decay': 0.0009756338870103029}
+  => Best val macro-F1: 0.3644
+  => Best params: {'hidden_dim': 256, 'num_layers': 3, 'aggr': 'mean', 'dropout': 0.0, 'lr': 0.009632727868859254, 'weight_decay': 0.0012222551268443087}
+
+  Evaluating best params across 10 splits...
+    split 0 | acc: 0.3724 | macro-F1: 0.3581 | weighted-F1: 0.3701 | epochs: 131
+    split 1 | acc: 0.3342 | macro-F1: 0.3238 | weighted-F1: 0.3281 | epochs: 138
+    split 2 | acc: 0.3684 | macro-F1: 0.3518 | weighted-F1: 0.3657 | epochs: 142
+    split 3 | acc: 0.3447 | macro-F1: 0.3241 | weighted-F1: 0.3398 | epochs: 146
+    split 4 | acc: 0.3447 | macro-F1: 0.3399 | weighted-F1: 0.3455 | epochs: 141
+    split 5 | acc: 0.3704 | macro-F1: 0.3505 | weighted-F1: 0.3664 | epochs: 133
+    split 6 | acc: 0.3493 | macro-F1: 0.3317 | weighted-F1: 0.3369 | epochs: 123
+    split 7 | acc: 0.3533 | macro-F1: 0.3447 | weighted-F1: 0.3473 | epochs: 146
+    split 8 | acc: 0.3612 | macro-F1: 0.3436 | weighted-F1: 0.3531 | epochs: 146
+    split 9 | acc: 0.3559 | macro-F1: 0.3373 | weighted-F1: 0.3552 | epochs: 135
+
+============================================================
+MODEL: GAT
+============================================================
+
+  Running Optuna HPO: 25 trials for [gat]
+    trial  1/25 | val macro-F1: 0.2651 | epochs:  143 | params: {'hidden_dim': 16, 'num_layers': 3, 'heads': 4, 'dropout': 0.0, 'lr': 0.05399484409787434, 'weight_decay': 0.0006358358856676254}
+    trial  2/25 | val macro-F1: 0.2682 | epochs:  112 | params: {'hidden_dim': 32, 'num_layers': 3, 'heads': 4, 'dropout': 0.1, 'lr': 0.004059611610484304, 'weight_decay': 0.00037520558551242813}
+    trial  3/25 | val macro-F1: 0.2630 | epochs:  104 | params: {'hidden_dim': 32, 'num_layers': 2, 'heads': 8, 'dropout': 0.30000000000000004, 'lr': 0.037183641805732096, 'weight_decay': 3.972110727381908e-05}
+    trial  4/25 | val macro-F1: 0.2140 | epochs:  188 | params: {'hidden_dim': 16, 'num_layers': 3, 'heads': 4, 'dropout': 0.6, 'lr': 0.08536189862866832, 'weight_decay': 0.002661901888489057}
+    trial  5/25 | val macro-F1: 0.2618 | epochs:  118 | params: {'hidden_dim': 32, 'num_layers': 2, 'heads': 8, 'dropout': 0.0, 'lr': 0.0658628931758311, 'weight_decay': 5.9750279999602906e-05}
+    trial  6/25 | val macro-F1: 0.2653 | epochs:  172 | params: {'hidden_dim': 8, 'num_layers': 3, 'heads': 4, 'dropout': 0.2, 'lr': 0.0015815209909357238, 'weight_decay': 0.0003756053904856278}
+    trial  7/25 | val macro-F1: 0.2009 | epochs:  121 | params: {'hidden_dim': 32, 'num_layers': 3, 'heads': 4, 'dropout': 0.30000000000000004, 'lr': 0.0036435262978797805, 'weight_decay': 0.006877477209765836}
+    trial  8/25 | val macro-F1: 0.2786 | epochs:  115 | params: {'hidden_dim': 8, 'num_layers': 2, 'heads': 4, 'dropout': 0.2, 'lr': 0.010868394789609444, 'weight_decay': 1.1030029929341687e-05}
+    trial  9/25 | val macro-F1: 0.2739 | epochs:  113 | params: {'hidden_dim': 8, 'num_layers': 2, 'heads': 8, 'dropout': 0.5, 'lr': 0.015185792349395402, 'weight_decay': 1.3692159797139415e-05}
+    trial 10/25 | val macro-F1: 0.2721 | epochs:  117 | params: {'hidden_dim': 8, 'num_layers': 2, 'heads': 4, 'dropout': 0.4, 'lr': 0.015089512900106267, 'weight_decay': 1.0205959412579592e-05}
+    trial 11/25 | val macro-F1: 0.2816 | epochs:  119 | params: {'hidden_dim': 8, 'num_layers': 2, 'heads': 8, 'dropout': 0.2, 'lr': 0.006337411963587614, 'weight_decay': 8.513569413752772e-05}
+    trial 12/25 | val macro-F1: 0.2741 | epochs:  120 | params: {'hidden_dim': 8, 'num_layers': 2, 'heads': 8, 'dropout': 0.2, 'lr': 0.006711632979128911, 'weight_decay': 7.381695850608386e-05}
+    trial 13/25 | val macro-F1: 0.2710 | epochs:  111 | params: {'hidden_dim': 8, 'num_layers': 2, 'heads': 8, 'dropout': 0.2, 'lr': 0.021063979781445134, 'weight_decay': 0.00011213110857684505}
+    trial 14/25 | val macro-F1: 0.2697 | epochs:  219 | params: {'hidden_dim': 8, 'num_layers': 2, 'heads': 8, 'dropout': 0.1, 'lr': 0.0010740407619157703, 'weight_decay': 2.656904771198843e-05}
+    trial 15/25 | val macro-F1: 0.2767 | epochs:  136 | params: {'hidden_dim': 8, 'num_layers': 2, 'heads': 4, 'dropout': 0.4, 'lr': 0.006753253069968018, 'weight_decay': 0.00017474799953437953}
+    trial 16/25 | val macro-F1: 0.2903 | epochs:  377 | params: {'hidden_dim': 8, 'num_layers': 2, 'heads': 8, 'dropout': 0.1, 'lr': 0.00278415053854671, 'weight_decay': 0.0012460145760560847}
+    trial 17/25 | val macro-F1: 0.2845 | epochs:  220 | params: {'hidden_dim': 16, 'num_layers': 2, 'heads': 8, 'dropout': 0.1, 'lr': 0.00317913702668862, 'weight_decay': 0.001418429322145018}
+    trial 18/25 | val macro-F1: 0.2864 | epochs:  362 | params: {'hidden_dim': 16, 'num_layers': 2, 'heads': 8, 'dropout': 0.1, 'lr': 0.002304525419065277, 'weight_decay': 0.0013190676101831182}
+    trial 19/25 | val macro-F1: 0.2660 | epochs:  298 | params: {'hidden_dim': 16, 'num_layers': 2, 'heads': 8, 'dropout': 0.0, 'lr': 0.001943323457587052, 'weight_decay': 0.0016849358489772286}
+    trial 20/25 | val macro-F1: 0.2575 | epochs:  111 | params: {'hidden_dim': 16, 'num_layers': 2, 'heads': 8, 'dropout': 0.1, 'lr': 0.0021835495862917637, 'weight_decay': 0.00814552378397783}
+    trial 21/25 | val macro-F1: 0.2703 | epochs:  160 | params: {'hidden_dim': 16, 'num_layers': 3, 'heads': 8, 'dropout': 0.0, 'lr': 0.0010716239797269522, 'weight_decay': 0.000830859741080672}
+    trial 22/25 | val macro-F1: 0.2721 | epochs:  159 | params: {'hidden_dim': 16, 'num_layers': 2, 'heads': 8, 'dropout': 0.1, 'lr': 0.0030605962527136808, 'weight_decay': 0.0023389066141770547}
+    trial 23/25 | val macro-F1: 0.2914 | epochs:  183 | params: {'hidden_dim': 16, 'num_layers': 2, 'heads': 8, 'dropout': 0.1, 'lr': 0.002717505742722799, 'weight_decay': 0.001038825656664543}
+    trial 24/25 | val macro-F1: 0.2367 | epochs:  105 | params: {'hidden_dim': 16, 'num_layers': 2, 'heads': 8, 'dropout': 0.1, 'lr': 0.00522129870181595, 'weight_decay': 0.003783187451949077}
+    trial 25/25 | val macro-F1: 0.2817 | epochs:  204 | params: {'hidden_dim': 16, 'num_layers': 2, 'heads': 8, 'dropout': 0.0, 'lr': 0.0023049425668070582, 'weight_decay': 0.0007910912067970635}
+  => Best val macro-F1: 0.2914
+  => Best params: {'hidden_dim': 16, 'num_layers': 2, 'heads': 8, 'dropout': 0.1, 'lr': 0.002717505742722799, 'weight_decay': 0.001038825656664543}
+
+  Evaluating best params across 10 splits...
+    split 0 | acc: 0.2750 | macro-F1: 0.2546 | weighted-F1: 0.2703 | epochs: 257
+    split 1 | acc: 0.2691 | macro-F1: 0.2560 | weighted-F1: 0.2612 | epochs: 154
+    split 2 | acc: 0.2836 | macro-F1: 0.2632 | weighted-F1: 0.2779 | epochs: 249
+    split 3 | acc: 0.2612 | macro-F1: 0.2490 | weighted-F1: 0.2619 | epochs: 296
+    split 4 | acc: 0.2592 | macro-F1: 0.2421 | weighted-F1: 0.2500 | epochs: 246
+    split 5 | acc: 0.2770 | macro-F1: 0.2551 | weighted-F1: 0.2682 | epochs: 262
+    split 6 | acc: 0.2763 | macro-F1: 0.2608 | weighted-F1: 0.2703 | epochs: 200
+    split 7 | acc: 0.2816 | macro-F1: 0.2634 | weighted-F1: 0.2767 | epochs: 232
+    split 8 | acc: 0.2888 | macro-F1: 0.2752 | weighted-F1: 0.2876 | epochs: 200
+    split 9 | acc: 0.2757 | macro-F1: 0.2546 | weighted-F1: 0.2685 | epochs: 132
+
+============================================================
+MODEL: APPNP
+============================================================
+
+  Running Optuna HPO: 25 trials for [appnp]
+    trial  1/25 | val macro-F1: 0.2878 | epochs:  159 | params: {'hidden_dim': 128, 'mlp_layers': 2, 'dropout': 0.0, 'lr': 0.002051110418843397, 'weight_decay': 1.493656855461762e-05, 'K': 5, 'alpha': 0.2}
+    trial  2/25 | val macro-F1: 0.3284 | epochs:  184 | params: {'hidden_dim': 64, 'mlp_layers': 1, 'dropout': 0.30000000000000004, 'lr': 0.007309539835912915, 'weight_decay': 7.476312062252303e-05, 'K': 5, 'alpha': 0.5}
+    trial  3/25 | val macro-F1: 0.3286 | epochs:  148 | params: {'hidden_dim': 256, 'mlp_layers': 1, 'dropout': 0.30000000000000004, 'lr': 0.002193048555664369, 'weight_decay': 1.5673095467235405e-05, 'K': 10, 'alpha': 0.5}
+    trial  4/25 | val macro-F1: 0.2950 | epochs:  143 | params: {'hidden_dim': 256, 'mlp_layers': 1, 'dropout': 0.5, 'lr': 0.0032927591344236173, 'weight_decay': 0.0009717775305059633, 'K': 20, 'alpha': 0.2}
+    trial  5/25 | val macro-F1: 0.2638 | epochs:  161 | params: {'hidden_dim': 64, 'mlp_layers': 2, 'dropout': 0.0, 'lr': 0.0024658447214487376, 'weight_decay': 1.3667272915456215e-05, 'K': 10, 'alpha': 0.1}
+    trial  6/25 | val macro-F1: 0.3098 | epochs:  235 | params: {'hidden_dim': 256, 'mlp_layers': 1, 'dropout': 0.30000000000000004, 'lr': 0.0732117324325261, 'weight_decay': 0.004539092158444034, 'K': 10, 'alpha': 0.5}
+    trial  7/25 | val macro-F1: 0.3408 | epochs:  106 | params: {'hidden_dim': 256, 'mlp_layers': 1, 'dropout': 0.5, 'lr': 0.027337623894788773, 'weight_decay': 0.0001666000816595018, 'K': 10, 'alpha': 0.5}
+    trial  8/25 | val macro-F1: 0.2231 | epochs:  119 | params: {'hidden_dim': 128, 'mlp_layers': 2, 'dropout': 0.5, 'lr': 0.04106839885847135, 'weight_decay': 0.0003119048547948531, 'K': 20, 'alpha': 0.1}
+    trial  9/25 | val macro-F1: 0.3414 | epochs:  108 | params: {'hidden_dim': 256, 'mlp_layers': 1, 'dropout': 0.5, 'lr': 0.02525371010647454, 'weight_decay': 0.00017321767217417147, 'K': 10, 'alpha': 0.5}
+    trial 10/25 | val macro-F1: 0.3362 | epochs:  227 | params: {'hidden_dim': 256, 'mlp_layers': 2, 'dropout': 0.2, 'lr': 0.01630066600995019, 'weight_decay': 0.0027819617663894414, 'K': 10, 'alpha': 0.5}
+    trial 11/25 | val macro-F1: 0.2787 | epochs:  143 | params: {'hidden_dim': 64, 'mlp_layers': 1, 'dropout': 0.4, 'lr': 0.00839903743233065, 'weight_decay': 7.992996883855207e-05, 'K': 5, 'alpha': 0.1}
+    trial 12/25 | val macro-F1: 0.3416 | epochs:  104 | params: {'hidden_dim': 256, 'mlp_layers': 1, 'dropout': 0.5, 'lr': 0.025545160375201343, 'weight_decay': 0.00020614529334790673, 'K': 10, 'alpha': 0.5}
+    trial 13/25 | val macro-F1: 0.3459 | epochs:  147 | params: {'hidden_dim': 256, 'mlp_layers': 1, 'dropout': 0.4, 'lr': 0.09888034727645795, 'weight_decay': 0.0008454465736728859, 'K': 10, 'alpha': 0.5}
+    trial 14/25 | val macro-F1: 0.3452 | epochs:  116 | params: {'hidden_dim': 256, 'mlp_layers': 1, 'dropout': 0.4, 'lr': 0.083209751796166, 'weight_decay': 0.0009363450371845195, 'K': 10, 'alpha': 0.5}
+    trial 15/25 | val macro-F1: 0.3479 | epochs:  214 | params: {'hidden_dim': 256, 'mlp_layers': 1, 'dropout': 0.2, 'lr': 0.09178990072106333, 'weight_decay': 0.0011042530640326099, 'K': 20, 'alpha': 0.5}
+    trial 16/25 | val macro-F1: 0.3129 | epochs:  133 | params: {'hidden_dim': 128, 'mlp_layers': 1, 'dropout': 0.1, 'lr': 0.05723310277950061, 'weight_decay': 0.0008675861009437885, 'K': 20, 'alpha': 0.2}
+    trial 17/25 | val macro-F1: 0.2270 | epochs:  168 | params: {'hidden_dim': 256, 'mlp_layers': 1, 'dropout': 0.2, 'lr': 0.08912320574864595, 'weight_decay': 0.009211831868921818, 'K': 20, 'alpha': 0.5}
+    trial 18/25 | val macro-F1: 0.3658 | epochs:  177 | params: {'hidden_dim': 256, 'mlp_layers': 2, 'dropout': 0.1, 'lr': 0.04211453916938091, 'weight_decay': 0.0016558390759877787, 'K': 20, 'alpha': 0.5}
+    trial 19/25 | val macro-F1: 0.2202 | epochs:  508 | params: {'hidden_dim': 64, 'mlp_layers': 2, 'dropout': 0.1, 'lr': 0.0010716239797269522, 'weight_decay': 0.002369229595250045, 'K': 20, 'alpha': 0.1}
+    trial 20/25 | val macro-F1: 0.2897 | epochs:  265 | params: {'hidden_dim': 128, 'mlp_layers': 2, 'dropout': 0.1, 'lr': 0.04317904481512389, 'weight_decay': 0.0022968307147602156, 'K': 20, 'alpha': 0.2}
+    trial 21/25 | val macro-F1: 0.3515 | epochs:  133 | params: {'hidden_dim': 256, 'mlp_layers': 2, 'dropout': 0.2, 'lr': 0.01614761576892824, 'weight_decay': 0.0005128717125444662, 'K': 20, 'alpha': 0.5}
+    trial 22/25 | val macro-F1: 0.3562 | epochs:  180 | params: {'hidden_dim': 256, 'mlp_layers': 2, 'dropout': 0.2, 'lr': 0.017481585047374862, 'weight_decay': 0.0011910581979628074, 'K': 20, 'alpha': 0.5}
+    trial 23/25 | val macro-F1: 0.3581 | epochs:  132 | params: {'hidden_dim': 256, 'mlp_layers': 2, 'dropout': 0.1, 'lr': 0.014086122893198053, 'weight_decay': 0.0004183746164159108, 'K': 20, 'alpha': 0.5}
+    trial 24/25 | val macro-F1: 0.3540 | epochs:  136 | params: {'hidden_dim': 256, 'mlp_layers': 2, 'dropout': 0.1, 'lr': 0.01282299804837802, 'weight_decay': 0.0004490529681704539, 'K': 20, 'alpha': 0.5}
+    trial 25/25 | val macro-F1: 0.3463 | epochs:  178 | params: {'hidden_dim': 256, 'mlp_layers': 2, 'dropout': 0.0, 'lr': 0.005528420221349955, 'weight_decay': 0.0015725011209362946, 'K': 20, 'alpha': 0.5}
+  => Best val macro-F1: 0.3658
+  => Best params: {'hidden_dim': 256, 'mlp_layers': 2, 'dropout': 0.1, 'lr': 0.04211453916938091, 'weight_decay': 0.0016558390759877787, 'K': 20, 'alpha': 0.5}
+
+  Evaluating best params across 10 splits...
+    split 0 | acc: 0.3842 | macro-F1: 0.3727 | weighted-F1: 0.3888 | epochs: 184
+    split 1 | acc: 0.3513 | macro-F1: 0.3417 | weighted-F1: 0.3527 | epochs: 220
+    split 2 | acc: 0.3487 | macro-F1: 0.3417 | weighted-F1: 0.3528 | epochs: 179
+    split 3 | acc: 0.3520 | macro-F1: 0.3327 | weighted-F1: 0.3521 | epochs: 160
+    split 4 | acc: 0.3487 | macro-F1: 0.3455 | weighted-F1: 0.3485 | epochs: 161
+    split 5 | acc: 0.3342 | macro-F1: 0.3228 | weighted-F1: 0.3418 | epochs: 196
+    split 6 | acc: 0.3428 | macro-F1: 0.3329 | weighted-F1: 0.3441 | epochs: 224
+    split 7 | acc: 0.3605 | macro-F1: 0.3581 | weighted-F1: 0.3663 | epochs: 217
+    split 8 | acc: 0.3546 | macro-F1: 0.3467 | weighted-F1: 0.3590 | epochs: 170
+    split 9 | acc: 0.3467 | macro-F1: 0.3364 | weighted-F1: 0.3544 | epochs: 179
+
+Saving results...
+  [saved] reports/milestone2/figures/confusion_matrix_lr_model.png
+  [saved] reports/milestone2/figures/confusion_matrix_mlp.png
+  [saved] reports/milestone2/figures/confusion_matrix_gcn.png
+  [saved] reports/milestone2/figures/confusion_matrix_sage.png
+  [saved] reports/milestone2/figures/confusion_matrix_gat.png
+  [saved] reports/milestone2/figures/confusion_matrix_appnp.png
+
+  [saved] reports/milestone2/tables/results_summary.csv
+  [saved] reports/milestone2/tables/best_params.csv
+  [saved] reports/milestone2/tables/per_class_f1.csv
+
+================================================================================
+RESULTS SUMMARY  (mean ± std over 10 splits)
+================================================================================
+  lr_model   | acc: 0.3395±0.0120 | macro-F1: 0.3232±0.0095 | weighted-F1: 0.3333±0.0127
+  mlp        | acc: 0.3655±0.0134 | macro-F1: 0.3495±0.0137 | weighted-F1: 0.3606±0.0136
+  gcn        | acc: 0.2688±0.0088 | macro-F1: 0.2461±0.0093 | weighted-F1: 0.2620±0.0104
+  sage       | acc: 0.3555±0.0120 | macro-F1: 0.3405±0.0110 | weighted-F1: 0.3508±0.0132
+  gat        | acc: 0.2747±0.0089 | macro-F1: 0.2574±0.0085 | weighted-F1: 0.2693±0.0098
+  appnp      | acc: 0.3524±0.0125 | macro-F1: 0.3431±0.0134 | weighted-F1: 0.3560±0.0128
+================================================================================
+  [saved] reports/milestone2/figures/macro_f1_comparison.png
+  [saved] reports/milestone2/figures/per_class_f1.png
+  [saved] reports/milestone2/tables/all_results.json
+
+Done. All outputs in: reports/milestone2
+Run finished: 2026-04-26T00:42:19.853666
